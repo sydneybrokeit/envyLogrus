@@ -21,9 +21,9 @@ func GetLogLevel(env_key, fallback string) (logLevel logrus.Level) {
 func GetCustomLogLevel(env_key, fallback string, logLevels map[string]logrus.Level) (output logrus.Level){
 	logFromEnv := envy.GetEnv(env_key, fallback)
 	if val, ok := logLevels[logFromEnv]; ok {
-		return logLevels[logFromEnv]
+		return val
 	} else if val, ok := logLevels[fallback]; ok {
-		return logLevels[fallback]
+		return val
 	} else {
 		return logrus.DebugLevel
 	}
