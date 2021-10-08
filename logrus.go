@@ -1,7 +1,7 @@
 package envyLogrus
 
 import (
-	"github.com/hmschreck/envy"
+	"github.com/sydneybrokeit/envy"
 	"github.com/sirupsen/logrus"
 )
 
